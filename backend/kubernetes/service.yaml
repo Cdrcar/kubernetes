@@ -1,0 +1,15 @@
+# You will need to use type: LoadBalancer so that the frontend can hit the API when loaded in the browser
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-service
+  labels:
+     app: backend-service
+spec:
+  selector:
+    app: backend
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 8080
+  type: LoadBalancer  # Adjust the service type as needed
