@@ -141,6 +141,4 @@ requires: - build-and-test
 
             ```
 
-You can see a fully complete example config in the finished_example.yml file.
-
 6. Git commit and push your built image to its AWS ECR repository
