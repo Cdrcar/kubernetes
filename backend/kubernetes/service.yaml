@@ -4,17 +4,17 @@ kind: Service
 metadata:
   name: backend-service
   labels:
-     app: backend-service
-     app.kubernetes.io/part-of: backend-api
+    app: backend-service
+    app.kubernetes.io/part-of: backend-api
   annotations:
-     prometheus.io/port: "metrics-port"
-     prometheus.io/scrape: "true"
+    prometheus.io/port: "metrics-port"
+    prometheus.io/scrape: "true"
 spec:
   selector:
-    app: backend-service
+    app: backend
   ports:
-  - protocol: TCP
-    port: 8080
-    targetPort: 8080
-     name: metrics-port
-  type: LoadBalancer  # Adjust the service type as needed
+    - protocol: TCP
+      port: 8080
+      targetPort: 8080
+      name: metrics
+  type: LoadBalancer
