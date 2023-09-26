@@ -7,11 +7,11 @@ metadata:
      app: backend-service
      app.kubernetes.io/part-of: backend-api
   annotations:
-    prometheus.io/port: "metrics-port"
-    prometheus.io/scrape: "true"
+     prometheus.io/port: "metrics-port"
+     prometheus.io/scrape: "true"
 spec:
   selector:
-    app: backend
+    app: backend-service
   ports:
   - protocol: TCP
     port: 8080
