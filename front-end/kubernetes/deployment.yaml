@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: my-front-end-app
-          image: public.ecr.aws/k8y9t4s7/frontend-group:16
+          image: public.ecr.aws/k8y9t4s7/frontend-group:20
           ports:
             - containerPort: 5173

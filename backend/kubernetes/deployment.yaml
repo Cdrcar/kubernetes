@@ -18,4 +18,3 @@ spec:
           image: public.ecr.aws/k8y9t4s7/backend-group:27
           ports:
             - containerPort: 8080
- 
