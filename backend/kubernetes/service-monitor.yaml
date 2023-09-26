@@ -3,9 +3,13 @@ kind: ServiceMonitor
 metadata:
   name: backend-service-monitor
   namespace: default
+  labels:
+    app: backend
+    release: prom
 spec:
   endpoints:
     - interval: 15s
+      path: /actuator/prometheus
       port: metrics-port
       scrapeTimeout: 14s
   namespaceSelector:
@@ -14,3 +18,4 @@ spec:
   selector:
     matchLabels:
       app.kubernetes.io/part-of: backend-api
+      release: prom
