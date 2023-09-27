@@ -4,18 +4,17 @@ kind: Service
 metadata:
   name: backend-service
   labels:
-    app: backend-service
-    app.kubernetes.io/part-of: backend-api
+    app: backend
+    app.kubernetes.io/part-of: backend # bookstore
   annotations:
     prometheus.io/port: "metrics-port"
     prometheus.io/scrape: "true"
-    prometheus.io/path: "/actuator/prometheus"
 spec:
   selector:
     app: backend
   ports:
     - protocol: TCP
       port: 8080
-      targetPort: 8080
       name: metrics-port
+      targetPort: 8080
   type: LoadBalancer
