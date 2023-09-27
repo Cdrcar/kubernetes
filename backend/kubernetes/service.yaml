@@ -9,6 +9,7 @@ metadata:
   annotations:
     prometheus.io/port: "metrics-port"
     prometheus.io/scrape: "true"
+    prometheus.io/path: "/actuator/prometheus"
 spec:
   selector:
     app: backend
